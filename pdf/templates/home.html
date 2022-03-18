@@ -8,16 +8,21 @@
 </head>
 <style>
 body {
-  background-color: lightblue;
+    background: #800080; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #800080, #ffc0cb); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #800080, #ffc0cb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 h1 {
   color: white;
   text-align: center;
   font-size: 80px;
+  margin-top: 50px;
 }
 h2 {
    text-align: center;
    font-size: 50px;
+   color: white;
+   margin-top: 50px;
 }
 
 .choose_file {
@@ -26,10 +31,36 @@ h2 {
     margin-right: -84px;
 }
 
+.choose_file>input[type="file"]::file-selector-button {
+  padding:10px;
+  border-radius:10px;
+  width: 130px;
+  
+}
 .upload {
     text-align: center; 
-    margin-top: 36px;
+    margin-top: 30px;
+    border-radius:10px;
+    width: 100%;
+    height: 50px;
+    
 }
+.button{
+    width:15%;
+    height: 50px;
+    border-radius:10px;
+    background-color:rgb(53, 216, 53);
+    font-size:25px;
+    border:none;
+    outline:none;
+    box-shadow: rgba(61, 59, 59, 0.35) 0px 5px 15px;
+
+}
+
+form{
+    margin-top: 70px;
+}
+
 </style>
 <body>
     <h1>E-Shipment</h1>
@@ -40,9 +71,8 @@ h2 {
         <input type="file" name="myfile">
     </div>
     <div class="upload">
-        <button class="btn btn-primary btn-lg" type="submit">Convert </button>
+        <button class="button"type="submit">Convert </button>
     </div>
-    
     </form>    
 </body>
 </html>
